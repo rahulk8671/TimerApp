@@ -20,7 +20,6 @@ var Controls = React.createClass({
             </div>
         )
     }
-
 });
 
 module.exports = Controls;
