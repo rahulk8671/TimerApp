@@ -20,7 +20,7 @@ var Controls = React.createClass({
             }
         }
         return (
-            <div>
+            <div className = "controls">
                 {renderStartStopButton()}
                 <button className = "button alert hollow" onClick = {this.onStatusChange('stopped')}>Clear</button>
             </div>
