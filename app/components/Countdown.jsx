@@ -34,7 +34,7 @@ var Countdown = React.createClass({
             if (newCount === 0) {
                 this.setState({
                     countdownStatus: 'stopped'
-                })
+                });
             }
         }, 1000)
     },
