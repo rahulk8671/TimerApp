@@ -43,6 +43,10 @@ var Timer = React.createClass({
             countdownStatus: newStatus
         });
     },
+    componentWillUnmount: function () {
+        clearInterval(this.timer);
+        this.timer = undefined;
+    },
     render: function () {
         var {count, countdownStatus} = this.state;
         
@@ -56,6 +60,7 @@ var Timer = React.createClass({
 
         return (
             <div>
+                <h1 className = "page-title">Timer App</h1>
                 <Clock totalSeconds = {count}/>
                 <Controls countdownStatus = {countdownStatus} onStatusChange = {this.handleStatusChange} />
             </div>
